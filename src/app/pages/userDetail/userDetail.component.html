@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="card card-rounded mb-3 p-5 w-100">
+      <div class="row no-gutters">
+        <div class="mr-5">
+          <img
+            [src]="user?.avatar_url"
+            class="card-img card-avatar"
+            alt="..."
+          />
+          <h5 class="text-center mt-3">{{ user?.name }}</h5>
+          <p class="text-center mt-1">{{ user?.login }}</p>
+          <a class="text-center mt-3" [href]="user?.blog">{{ user?.blog }}</a>
+        </div>
+        <div class="col-md-8">
+          <div class="row py-5">
+            <div class="col-lg-3 col-sm-6">
+              <h1 class="text-center">{{ user?.public_repos }}</h1>
+              <h5 class="text-center">Public Repos</h5>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <h1 class="text-center">{{ user?.public_gists }}</h1>
+              <h5 class="text-center">Public Repos</h5>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <h1 class="text-center">{{ user?.followers }}</h1>
+              <h5 class="text-center">Followers</h5>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <h1 class="text-center">{{ user?.following }}</h1>
+              <h5 class="text-center">Following</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p class="mt-1"><strong>Biography: </strong>{{ user?.bio }}</p>
+              <p class="mt-1"><strong>Company: </strong>{{ user?.company }}</p>
+              <p class="mt-1">
+                <strong>Twitter: </strong
+                ><a href="#!">@{{ user?.twitter_username }}</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

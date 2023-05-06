@@ -1,0 +1,10 @@
+<div class="card text-center card-rounded p-3 mb-5" style="width: 18rem">
+  <img [src]="user?.avatar_url" class="card-img-top card-avatar" alt="avatar" />
+  <div class="card-body">
+    <h5 class="card-title">{{ user?.name }}</h5>
+    <p class="card-text">{{ user?.login }}</p>
+    <a [routerLink]="['/user', user?.login]" class="btn btn-primary"
+      >View Profile</a
+    >
+  </div>
+</div>
